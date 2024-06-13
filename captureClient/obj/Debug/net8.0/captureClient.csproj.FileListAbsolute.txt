@@ -1,0 +1,14 @@
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/bin/Debug/net8.0/captureClient
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/bin/Debug/net8.0/captureClient.deps.json
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/bin/Debug/net8.0/captureClient.runtimeconfig.json
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/bin/Debug/net8.0/captureClient.dll
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/bin/Debug/net8.0/captureClient.pdb
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.AssemblyInfoInputs.cache
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.AssemblyInfo.cs
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.csproj.CoreCompileInputs.cache
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.dll
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/refint/captureClient.dll
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.pdb
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/captureClient.genruntimeconfig.cache
+/Users/lewissteentjes/Coding/Projects/plants/captureClient/obj/Debug/net8.0/ref/captureClient.dll
