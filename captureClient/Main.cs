@@ -1,17 +1,27 @@
 // See https://aka.ms/new-console-template for more information
 
+using PostgrestExample.models;
+
 public class Application
 {
-    static void Main()
+    static async Task Main()
     {
         Console.WriteLine("Reading SupaBase credentials...");
         string SUPABASE_URL = ReadSecret("SUPABASE_URL", "userSecrets.env");
         string SUPABASE_KEY = ReadSecret("SUPABASE_KEY", "userSecrets.env");
-        Console.WriteLine(SUPABASE_URL);
-        Console.WriteLine(SUPABASE_KEY);
+        // Console.WriteLine(SUPABASE_URL);
+        // Console.WriteLine(SUPABASE_KEY);
+        var options = new Supabase.SupabaseOptions
         {
-
-        }
+            AutoConnectRealtime = true
+        };
+        var supabase = new Supabase.Client(SUPABASE_URL, SUPABASE_KEY, options);
+        Console.WriteLine("initializing supabase...");
+        await supabase.InitializeAsync();
+        Console.WriteLine("Supabase initialized!");
+        var result = await supabase.From<User>().Get();
+        var users = result.Models;
+        Console.WriteLine(users);
 
     }
 
