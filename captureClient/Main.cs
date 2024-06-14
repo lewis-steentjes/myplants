@@ -1,27 +1,48 @@
 // See https://aka.ms/new-console-template for more information
-
 using PostgrestExample.models;
 
 public class Application
 {
-    static async Task Main()
+    static async Task Main(string[] args)
     {
-        Console.WriteLine("Reading SupaBase credentials...");
-        string SUPABASE_URL = ReadSecret("SUPABASE_URL", "userSecrets.env");
-        string SUPABASE_KEY = ReadSecret("SUPABASE_KEY", "userSecrets.env");
-        // Console.WriteLine(SUPABASE_URL);
-        // Console.WriteLine(SUPABASE_KEY);
-        var options = new Supabase.SupabaseOptions
+        Console.WriteLine(args.Length);
+        if (false) // skip for now
         {
-            AutoConnectRealtime = true
-        };
-        var supabase = new Supabase.Client(SUPABASE_URL, SUPABASE_KEY, options);
-        Console.WriteLine("initializing supabase...");
-        await supabase.InitializeAsync();
-        Console.WriteLine("Supabase initialized!");
-        var result = await supabase.From<User>().Get();
-        var users = result.Models;
-        Console.WriteLine(users);
+            Console.WriteLine("Reading SupaBase credentials...");
+            string SUPABASE_URL = ReadSecret("SUPABASE_URL", "userSecrets.env");
+            string SUPABASE_KEY = ReadSecret("SUPABASE_KEY", "userSecrets.env");
+            // Console.WriteLine(SUPABASE_URL);
+            // Console.WriteLine(SUPABASE_KEY);
+            var options = new Supabase.SupabaseOptions
+            {
+                AutoConnectRealtime = true
+            };
+            var supabase = new Supabase.Client(SUPABASE_URL, SUPABASE_KEY, options);
+            Console.WriteLine("initializing supabase...");
+            await supabase.InitializeAsync();
+            Console.WriteLine("Supabase initialized!");
+
+            var toInsert = new Plant
+            {
+                Name = "spider plant",
+                Desc = "crazy legs thing of a plant",
+                WateringFrequency = 9,
+                OwnerId = 1
+            };
+
+            // var db = await supabase.From<Plant>();
+            var result = await supabase.From<Plant>().Get();
+            var plants = result.Models;
+            foreach (Plant plant in plants)
+            {
+                Console.WriteLine(plant);
+            }
+        }
+
+    }
+
+    static void parseArgs(string[] args)
+    {
 
     }
 
