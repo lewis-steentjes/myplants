@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("uploadPlantData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f14f0fdf6fe23f6f07e233e17f021e1534ee96bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e254ccced92f35845ccdcf6fa087531bf37a79d")]
 [assembly: System.Reflection.AssemblyProductAttribute("uploadPlantData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("uploadPlantData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
