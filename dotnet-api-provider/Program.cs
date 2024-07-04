@@ -39,4 +39,8 @@ app.MapGet("/green", () => "#00FF00");
 
 app.MapGet("/blue", () => "#0000FF");
 
+app.MapGet("/double", (int num) => {
+
+  return num * num;
+  });
 app.Run();
