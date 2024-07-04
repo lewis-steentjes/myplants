@@ -1,10 +1,13 @@
 'use client'
 import { useState } from "react"
+import getRed from "../_utils/clientApi/getColours"
 
 export default function Picker() {
   const [state, setState] = useState(0)
-  const handle1 = () => {
+  const handle1 = async () => {
     setState(1)
+    const red = await getRed();
+    alert(red);
   }
   const handle2 = () => {
     setState(2)
